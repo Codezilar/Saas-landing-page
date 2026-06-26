@@ -1,0 +1,284 @@
+.section {
+  padding: 80px 0;
+  background: var(--surface);
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.heading {
+  margin-top: 16px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.sub {
+  margin-top: 12px;
+  max-width: 480px;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.grid {
+  margin-top: 44px;
+  width: 100%;
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 1fr;
+  text-align: left;
+}
+
+.card {
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 22px;
+  box-shadow: var(--shadow-soft);
+}
+
+.statHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--text-soft);
+}
+
+.statLabel {
+  font-size: 0.78rem;
+  color: var(--text-soft);
+}
+
+.statValue {
+  margin-top: 8px;
+  font-size: 1.9rem;
+  font-weight: 700;
+}
+
+.statValueSmall {
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.statTrend {
+  margin-top: 6px;
+  font-size: 0.72rem;
+  color: #1fae7e;
+}
+
+.trendUp {
+  color: #1fae7e;
+}
+
+.cardTitle {
+  margin-top: 18px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.cardText {
+  margin-top: 8px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+.chartHead {
+  display: flex;
+  flex-direction: column;
+}
+
+.waveHead {
+  margin-top: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wave {
+  margin-top: 12px;
+  width: 100%;
+  height: 80px;
+}
+
+.waveTicks {
+  margin-top: 6px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.62rem;
+  color: var(--text-soft);
+}
+
+.chartHeadRow {
+  margin-top: 18px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.statSub {
+  font-size: 0.65rem;
+  color: var(--text-soft);
+  margin-top: 2px;
+}
+
+.chip {
+  font-size: 0.66rem;
+  color: var(--text-muted);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 5px 11px;
+  white-space: nowrap;
+}
+
+.bars {
+  margin-top: 16px;
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  height: 110px;
+}
+
+.barCol {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  gap: 8px;
+}
+
+.bar {
+  width: 100%;
+  border-radius: 6px 6px 2px 2px;
+  background: var(--accent-grad);
+  opacity: 0.85;
+}
+
+.barLabel {
+  font-size: 0.62rem;
+  color: var(--text-soft);
+}
+
+.donutRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.donutBody {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.donut {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: conic-gradient(
+    var(--accent-a) 0deg 130deg,
+    var(--accent-b) 130deg 230deg,
+    #f0b95c 230deg 300deg,
+    var(--border) 300deg 360deg
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.donut::before {
+  content: "";
+  position: absolute;
+  inset: 14px;
+  border-radius: 50%;
+  background: var(--bg-soft);
+}
+
+.donutValue {
+  position: relative;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.donutLegend {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.donutLegend li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.donutLegend b {
+  color: var(--text);
+  margin-left: auto;
+  font-weight: 700;
+}
+
+.legendDotA,
+.legendDotB,
+.legendDotC,
+.legendDotD {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.legendDotA {
+  background: var(--accent-a);
+}
+
+.legendDotB {
+  background: var(--accent-b);
+}
+
+.legendDotC {
+  background: #f0b95c;
+}
+
+.legendDotD {
+  background: var(--border);
+}
+
+.tagsRow {
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.tag {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  background: var(--chip-bg);
+  border: 1px solid var(--border);
+  padding: 7px 16px;
+  border-radius: 999px;
+}
+
+@media (min-width: 860px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
