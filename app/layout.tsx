@@ -17,7 +17,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "AGENTCLI — SaaS, Websites, Apps, and Creative Services",
+  title: "AGENTCLI",
   description:
     "Build SaaS products, websites, mobile apps, creative assets, SEO campaigns, social media packages, animations, and 3D models with AGENTCLI.",
 };
