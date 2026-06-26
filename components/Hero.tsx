@@ -4,12 +4,12 @@ export default function Hero() {
   return (
     <section id="top" className="hero">
       <div className="container hero-inner">
-        <span className="eyebrow">Welcome to AGENTCLI Studio</span>
+        <span className="eyebrow">Welcome to AGENTCLI</span>
 
         <h1 className="hero-heading">
-          Build Your Next
+          Build And Scale Your Next
           <br />
-          <span className="gradientText">SaaS, Website, or App</span>
+          <span className="gradientText">Digital Product</span>
         </h1>
 
         <p className="hero-sub">

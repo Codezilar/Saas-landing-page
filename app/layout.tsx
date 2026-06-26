@@ -22,6 +22,25 @@ export const metadata: Metadata = {
     "Build SaaS products, websites, mobile apps, creative assets, SEO campaigns, social media packages, animations, and 3D models with AGENTCLI.",
 };
 
+const themeInitScript = `
+(() => {
+  try {
+    const stored = window.localStorage.getItem("agentcli-theme");
+    const theme = stored === "light" || stored === "dark"
+      ? stored
+      : window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light";
+
+    document.documentElement.setAttribute("data-theme", theme);
+    document.documentElement.style.colorScheme = theme;
+  } catch {
+    document.documentElement.setAttribute("data-theme", "light");
+    document.documentElement.style.colorScheme = "light";
+  }
+})();
+`;
+
 export default function RootLayout({
   children,
 }: {
@@ -29,6 +48,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${sora.variable} ${inter.variable}`} suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
       <body suppressHydrationWarning>
         <ThemeProvider>{children}</ThemeProvider>
       </body>
