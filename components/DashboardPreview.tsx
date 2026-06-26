@@ -1,26 +1,26 @@
 
 const stats = [
-  { label: "Delivered", value: "$12,199", trend: "0.8%", up: true },
-  { label: "Opened", value: "$1,510", trend: "0.3%", up: false },
-  { label: "Clicked", value: "$12,344", trend: "5.1%", up: true },
-  { label: "Subscribe", value: "$41,510", trend: "0.6%", up: true },
+  { label: "Projects Live", value: "48", trend: "12%", up: true },
+  { label: "Build Tasks", value: "126", trend: "4%", up: false },
+  { label: "Campaign Leads", value: "2.4k", trend: "18%", up: true },
+  { label: "Launch Revenue", value: "$41k", trend: "9%", up: true },
 ];
 
-const bars = [38, 52, 30, 70, 46, 60, 35];
+const bars = [42, 58, 36, 74, 52, 68, 46];
 
-const countries = [
-  { name: "Thailand", value: "26,531,212" },
-  { name: "Indonesia", value: "15,491,120" },
-  { name: "China", value: "11,443,140" },
+const services = [
+  { name: "SaaS Builds", value: "18 active scopes", percent: "94%" },
+  { name: "Web Launches", value: "24 pages in review", percent: "88%" },
+  { name: "Growth Campaigns", value: "12 live channels", percent: "91%" },
 ];
 
 const sidebarLinks = [
-  { label: "Dashboard", active: true },
-  { label: "Products", active: false },
-  { label: "Campaigns", active: false },
-  { label: "Manage Customer", active: false },
-  { label: "Settings", active: false },
-  { label: "Help & Service", active: false },
+  { label: "Launch Hub", active: true },
+  { label: "SaaS Builds", active: false },
+  { label: "Websites", active: false },
+  { label: "Creative Assets", active: false },
+  { label: "Growth Plans", active: false },
+  { label: "Client Support", active: false },
 ];
 
 export default function DashboardPreview() {
@@ -29,9 +29,9 @@ export default function DashboardPreview() {
       <div className="dashboard-sidebar">
         <div className="dashboard-sidebar-brand">
           <span className="dashboard-sidebar-dot" />
-          Pasar Marketing
+          AGENTCLI
         </div>
-        <p className="dashboard-sidebar-group">Administration</p>
+        <p className="dashboard-sidebar-group">Delivery</p>
         <nav className="dashboard-sidebar-nav">
           {sidebarLinks.map((item) => (
             <span
@@ -44,25 +44,25 @@ export default function DashboardPreview() {
             </span>
           ))}
         </nav>
-        <p className="dashboard-sidebar-group">Insights</p>
+        <p className="dashboard-sidebar-group">Growth</p>
         <nav className="dashboard-sidebar-nav">
-          <span className="dashboard-sidebar-link">Notifications</span>
-          <span className="dashboard-sidebar-link">Messages</span>
+          <span className="dashboard-sidebar-link">SEO Reports</span>
+          <span className="dashboard-sidebar-link">Social Content</span>
         </nav>
       </div>
 
       <div className="dashboard-panel">
         <div className="dashboard-panel-head">
           <div>
-            <h3 className="dashboard-panel-title">Dashboard</h3>
+            <h3 className="dashboard-panel-title">Launch Dashboard</h3>
             <p className="dashboard-panel-sub">
-              Here is today&apos;s report and performance
+              Product builds, creative work, and growth activity in one view
             </p>
           </div>
           <div className="dashboard-panel-controls">
-            <span className="dashboard-chip">Jan 20 - Jan 31</span>
-            <span className="dashboard-chip">Monthly ⌄</span>
-            <span className="dashboard-chip">⏚ Filter</span>
+            <span className="dashboard-chip">Sprint 04</span>
+            <span className="dashboard-chip">Launch view</span>
+            <span className="dashboard-chip">Filter</span>
           </div>
         </div>
 
@@ -76,7 +76,7 @@ export default function DashboardPreview() {
                   s.up ? "dashboard-trend-up" : "dashboard-trend-down"
                 }`}
               >
-                Last week {s.up ? "↗" : "↘"} {s.trend}
+                This week {s.up ? "↗" : "↘"} {s.trend}
               </p>
             </div>
           ))}
@@ -86,17 +86,17 @@ export default function DashboardPreview() {
           <div className="dashboard-chart-card">
             <div className="dashboard-chart-head">
               <div>
-                <p className="dashboard-chart-title">Performance Overview</p>
-                <p className="dashboard-chart-sub">Statistics</p>
+                <p className="dashboard-chart-title">Delivery Momentum</p>
+                <p className="dashboard-chart-sub">Build and growth progress</p>
               </div>
-              <span className="dashboard-chip">Last 6 Months</span>
+              <span className="dashboard-chip">Last 7 sprints</span>
             </div>
             <div className="dashboard-legend-row">
               <span className="dashboard-legend-item">
-                <i className="dashboard-legend-dot-primary" /> Total Subscriber
+                <i className="dashboard-legend-dot-primary" /> Completed work
               </span>
               <span className="dashboard-legend-item">
-                <i className="dashboard-legend-dot-muted" /> Total Revenue
+                <i className="dashboard-legend-dot-muted" /> Planned scope
               </span>
             </div>
             <div className="dashboard-bars">
@@ -111,16 +111,16 @@ export default function DashboardPreview() {
           </div>
 
           <div className="dashboard-seller-card">
-            <p className="dashboard-chart-title">Top Seller by Country</p>
+            <p className="dashboard-chart-title">Active Service Tracks</p>
             <ul className="dashboard-seller-list">
-              {countries.map((c) => (
-                <li key={c.name} className="dashboard-seller-row">
+              {services.map((service) => (
+                <li key={service.name} className="dashboard-seller-row">
                   <span className="dashboard-seller-flag" aria-hidden />
                   <span className="dashboard-seller-name">
-                    {c.name}
-                    <span className="dashboard-seller-value">{c.value}</span>
+                    {service.name}
+                    <span className="dashboard-seller-value">{service.value}</span>
                   </span>
-                  <span className="dashboard-seller-percent">92%</span>
+                  <span className="dashboard-seller-percent">{service.percent}</span>
                 </li>
               ))}
             </ul>

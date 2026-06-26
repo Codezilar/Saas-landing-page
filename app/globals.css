@@ -884,6 +884,108 @@ img {
   }
 }
 
+/* Marketing */
+.marketing-section {
+  padding: 80px 0;
+  min-height: 400px;
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.marketing-inner {
+  display: grid;
+  gap: 32px;
+  align-items: center;
+}
+
+.marketing-copy {
+  max-width: 520px;
+}
+
+.marketing-heading {
+  margin-top: 16px;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.marketing-sub {
+  margin-top: 12px;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.marketing-btn {
+  margin-top: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 24px;
+  border-radius: 999px;
+  background: var(--accent-grad);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.marketing-btn:hover {
+  transform: translateY(-1px);
+  opacity: 0.92;
+}
+
+.marketing-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.marketing-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: var(--shadow-soft);
+}
+
+.marketing-metric {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 48px;
+  height: 30px;
+  border-radius: 999px;
+  background: var(--surface-2);
+  color: var(--accent-b);
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.marketing-card-title {
+  margin-top: 16px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.marketing-card-text {
+  margin-top: 8px;
+  color: var(--text-muted);
+  font-size: 0.84rem;
+  line-height: 1.6;
+}
+
+@media (min-width: 860px) {
+  .marketing-inner {
+    grid-template-columns: 0.9fr 1.1fr;
+  }
+
+  .marketing-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 /* Solution */
 .solution-section {
   padding: 80px 0;
@@ -1382,6 +1484,14 @@ img {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+  }
+
+}
+
+@media (max-width: 1024px) {
+  .marketing-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
   }
 }
 
