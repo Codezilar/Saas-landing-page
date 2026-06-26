@@ -1,46 +1,46 @@
-import styles from "./Solution.module.css";
 
 const items = [
   {
-    icon: "📣",
-    title: "Smart Campaign Optimization",
-    text: "Automate and enhance your marketing campaigns with AI-powered tools for maximum efficiency and ROI.",
+    icon: "⚙️",
+    title: "Custom SaaS & Product Builds",
+    text: "Turn your workflow, marketplace, dashboard, or client portal into a polished product your users can rely on.",
   },
   {
-    icon: "📊",
-    title: "Real-Time Data & Insights",
-    text: "Gain instant access to key marketing metrics, track engagement, and make data-driven decisions effortlessly.",
+    icon: "🧩",
+    title: "Websites, Apps & Integrations",
+    text: "Connect design, frontend, backend, payments, authentication, and content management into one reliable launch.",
   },
   {
-    icon: "🎯",
-    title: "Advanced Audience Targeting",
-    text: "Deliver personalized messages to the right audience with precision segmentation and behavioral analytics.",
+    icon: "🚀",
+    title: "Creative Growth Support",
+    text: "Support your launch with SEO, social media, animation, graphic design, 3D assets, and conversion-focused content.",
   },
 ];
 
 export default function Solution() {
   return (
-    <section className={styles.section}>
-      <div className={`container ${styles.inner}`}>
-        <span className="eyebrow">Welcome to PasarMarketing</span>
-        <h2 className={styles.heading}>
-          The Ultimate
+    <section className="solution-section">
+      <div className="container solution-inner">
+        <span className="eyebrow">What we build</span>
+        <h2 className="solution-heading">
+          One Team for
           <br />
-          Digital Marketing Solution
+          SaaS and More
         </h2>
-        <p className={styles.sub}>
-          Enhance your marketing strategy with automation, real-time
-          insights, and advanced targeting—all in one seamless platform.
+        <p className="solution-sub">
+          Bring your product, brand, and launch channels together with a
+          practical team that can design, build, ship, and improve the full
+          digital experience.
         </p>
 
-        <div className={styles.grid}>
+        <div className="solution-grid">
           {items.map((item) => (
-            <div key={item.title} className={styles.card}>
-              <span className={styles.icon} aria-hidden>
+            <div key={item.title} className="solution-card">
+              <span className="solution-icon" aria-hidden>
                 {item.icon}
               </span>
-              <h3 className={styles.cardTitle}>{item.title}</h3>
-              <p className={styles.cardText}>{item.text}</p>
+              <h3 className="solution-card-title">{item.title}</h3>
+              <p className="solution-card-text">{item.text}</p>
             </div>
           ))}
         </div>

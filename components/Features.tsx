@@ -1,56 +1,55 @@
-import styles from "./Features.module.css";
 
-const tagsRowOne = ["Optimization", "Performance", "Analytics", "Marketing"];
-const tagsRowTwo = ["Advertising", "Campaigns", "Growth"];
+const tagsRowOne = ["SaaS", "Websites", "Mobile Apps", "Automation"];
+const tagsRowTwo = ["Branding", "SEO", "Social Media", "3D & Animation"];
 
 const insightBars = [55, 70, 40, 85, 60, 35];
 const insightLabels = ["Jan", "Feb", "Mar", "Apr", "May", "Jun"];
 
 export default function Features() {
   return (
-    <section id="features" className={styles.section}>
-      <div className={`container ${styles.inner}`}>
+    <section id="features" className="features-section">
+      <div className="container features-inner">
         <span className="eyebrow">Features</span>
-        <h2 className={styles.heading}>All you need to do bussiness</h2>
-        <p className={styles.sub}>
-          Track campaign performance, analyze key metrics, and make
-          data-driven decisions—all in one intuitive dashboard.
+        <h2 className="features-heading">Everything You Need to Launch Online</h2>
+        <p className="features-sub">
+          Plan, design, develop, publish, and grow digital products with clear
+          milestones and a dashboard-style workflow.
         </p>
 
-        <div className={styles.grid}>
-          <div className={styles.card}>
-            <div className={styles.statHead}>
-              <p className={styles.statLabel}>Delivered</p>
+        <div className="features-grid">
+          <div className="features-card">
+            <div className="features-stat-head">
+              <p className="features-stat-label">Projects shipped</p>
               <span aria-hidden>⋯</span>
             </div>
-            <p className={styles.statValue}>$12,199</p>
-            <p className={styles.statTrend}>Last week ↗ 0.8%</p>
+            <p className="features-stat-value">$12,199</p>
+            <p className="features-stat-trend">Last week ↗ 0.8%</p>
 
-            <h3 className={styles.cardTitle}>Track Performance at a Glance</h3>
-            <p className={styles.cardText}>
-              Monitor key metrics in real time and make data-driven decisions
-              with ease.
+            <h3 className="features-card-title">Track Every Build at a Glance</h3>
+            <p className="features-card-text">
+              Follow deliverables, timelines, revisions, and launch tasks from
+              first idea to final handoff.
             </p>
           </div>
 
-          <div className={styles.card}>
-            <div className={styles.chartHead}>
-              <h3 className={styles.cardTitle}>Real-Time Analytics</h3>
-              <p className={styles.cardText}>
-                Gain instant insights into customer behavior and campaign
-                performance, enabling you to optimize strategies on the go.
+          <div className="features-card">
+            <div className="features-chart-head">
+              <h3 className="features-card-title">Live Product Progress</h3>
+              <p className="features-card-text">
+                Keep visibility across design, development, content, SEO, and
+                creative work as your project moves forward.
               </p>
             </div>
 
-            <div className={styles.waveHead}>
-              <span className={styles.statLabel}>Real-time customers</span>
-              <span className={styles.statValueSmall}>
-                1,027 <span className={styles.trendUp}>↗ 0.3%</span>
+            <div className="features-wave-head">
+              <span className="features-stat-label">Active tasks</span>
+              <span className="features-stat-value-small">
+                1,027 <span className="features-trend-up">↗ 0.3%</span>
               </span>
             </div>
             <svg
               viewBox="0 0 280 80"
-              className={styles.wave}
+              className="features-wave"
               preserveAspectRatio="none"
               aria-hidden
             >
@@ -61,82 +60,81 @@ export default function Features() {
                 strokeWidth="2.5"
               />
             </svg>
-            <div className={styles.waveTicks}>
+            <div className="features-wave-ticks">
               {["10:00", "13:00", "16:00", "19:00", "22:00"].map((t) => (
                 <span key={t}>{t}</span>
               ))}
             </div>
           </div>
 
-          <div className={styles.card}>
-            <div className={styles.chartHead}>
-              <h3 className={styles.cardTitle}>Data Insights for Smarter Decisions</h3>
-              <p className={styles.cardText}>
-                Leverage in-depth analytics to uncover trends, optimize
-                performance, and drive better business outcomes with
-                confidence.
+          <div className="features-card">
+            <div className="features-chart-head">
+              <h3 className="features-card-title">Clear Insights for Better Decisions</h3>
+              <p className="features-card-text">
+                Compare milestones, scope, content, and growth metrics so every
+                launch decision has context.
               </p>
             </div>
 
-            <div className={styles.chartHeadRow}>
+            <div className="features-chart-head-row">
               <div>
-                <p className={styles.statLabel}>Performance Overview</p>
-                <p className={styles.statSub}>Statistics</p>
+                <p className="features-stat-label">Delivery Overview</p>
+                <p className="features-stat-sub">Milestones</p>
               </div>
-              <span className={styles.chip}>Last 6 Months</span>
+              <span className="features-chip">Last 6 Months</span>
             </div>
 
-            <div className={styles.bars}>
+            <div className="features-bars">
               {insightBars.map((h, i) => (
-                <div key={i} className={styles.barCol}>
-                  <span className={styles.bar} style={{ height: `${h}%` }} />
-                  <span className={styles.barLabel}>{insightLabels[i]}</span>
+                <div key={i} className="features-bar-col">
+                  <span className="features-bar" style={{ height: `${h}%` }} />
+                  <span className="features-bar-label">{insightLabels[i]}</span>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className={styles.card}>
-            <div className={styles.donutRow}>
-              <p className={styles.cardTitle}>Platform Statistic</p>
+          <div className="features-card">
+            <div className="features-donut-row">
+              <p className="features-card-title">Service Mix</p>
             </div>
-            <div className={styles.donutBody}>
-              <div className={styles.donut} aria-hidden>
-                <span className={styles.donutValue}>12,563</span>
+            <div className="features-donut-body">
+              <div className="features-donut" aria-hidden>
+                <span className="features-donut-value">12,563</span>
               </div>
-              <ul className={styles.donutLegend}>
+              <ul className="features-donut-legend">
                 <li>
-                  <span className={styles.legendDotA} /> Views <b>3,678</b>
+                  <span className="features-legend-dot-a" /> SaaS <b>3,678</b>
                 </li>
                 <li>
-                  <span className={styles.legendDotB} /> Sales <b>3,250</b>
+                  <span className="features-legend-dot-b" /> Web <b>3,250</b>
                 </li>
                 <li>
-                  <span className={styles.legendDotC} /> Clicks <b>2,641</b>
+                  <span className="features-legend-dot-c" /> Apps <b>2,641</b>
                 </li>
                 <li>
-                  <span className={styles.legendDotD} /> Likes <b>1,234</b>
+                  <span className="features-legend-dot-d" /> Growth <b>1,234</b>
                 </li>
               </ul>
             </div>
-            <h3 className={styles.cardTitle}>Campaign Performance in One View</h3>
-            <p className={styles.cardText}>
-              Track key metrics and trends in real time from a single
-              dashboard.
+            <h3 className="features-card-title">Product Delivery in One View</h3>
+            <p className="features-card-text">
+              See the work across strategy, design, development, creative, and
+              promotion without losing the big picture.
             </p>
           </div>
         </div>
 
-        <div className={styles.tagsRow}>
+        <div className="features-tags-row">
           {tagsRowOne.map((t) => (
-            <span key={t} className={styles.tag}>
+            <span key={t} className="features-tag">
               ◆ {t}
             </span>
           ))}
         </div>
-        <div className={styles.tagsRow}>
+        <div className="features-tags-row">
           {tagsRowTwo.map((t) => (
-            <span key={t} className={styles.tag}>
+            <span key={t} className="features-tag">
               ◆ {t}
             </span>
           ))}

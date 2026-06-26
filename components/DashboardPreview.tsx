@@ -1,4 +1,3 @@
-import styles from "./DashboardPreview.module.css";
 
 const stats = [
   { label: "Delivered", value: "$12,199", trend: "0.8%", up: true },
@@ -26,55 +25,55 @@ const sidebarLinks = [
 
 export default function DashboardPreview() {
   return (
-    <div className={styles.frame}>
-      <div className={styles.sidebar}>
-        <div className={styles.sidebarBrand}>
-          <span className={styles.sidebarDot} />
+    <div className="dashboard-frame">
+      <div className="dashboard-sidebar">
+        <div className="dashboard-sidebar-brand">
+          <span className="dashboard-sidebar-dot" />
           Pasar Marketing
         </div>
-        <p className={styles.sidebarGroup}>Administration</p>
-        <nav className={styles.sidebarNav}>
+        <p className="dashboard-sidebar-group">Administration</p>
+        <nav className="dashboard-sidebar-nav">
           {sidebarLinks.map((item) => (
             <span
               key={item.label}
-              className={`${styles.sidebarLink} ${
-                item.active ? styles.sidebarLinkActive : ""
+              className={`dashboard-sidebar-link ${
+                item.active ? "dashboard-sidebar-link-active" : ""
               }`}
             >
               {item.label}
             </span>
           ))}
         </nav>
-        <p className={styles.sidebarGroup}>Insights</p>
-        <nav className={styles.sidebarNav}>
-          <span className={styles.sidebarLink}>Notifications</span>
-          <span className={styles.sidebarLink}>Messages</span>
+        <p className="dashboard-sidebar-group">Insights</p>
+        <nav className="dashboard-sidebar-nav">
+          <span className="dashboard-sidebar-link">Notifications</span>
+          <span className="dashboard-sidebar-link">Messages</span>
         </nav>
       </div>
 
-      <div className={styles.panel}>
-        <div className={styles.panelHead}>
+      <div className="dashboard-panel">
+        <div className="dashboard-panel-head">
           <div>
-            <h3 className={styles.panelTitle}>Dashboard</h3>
-            <p className={styles.panelSub}>
+            <h3 className="dashboard-panel-title">Dashboard</h3>
+            <p className="dashboard-panel-sub">
               Here is today&apos;s report and performance
             </p>
           </div>
-          <div className={styles.panelControls}>
-            <span className={styles.chip}>Jan 20 - Jan 31</span>
-            <span className={styles.chip}>Monthly ⌄</span>
-            <span className={styles.chip}>⏚ Filter</span>
+          <div className="dashboard-panel-controls">
+            <span className="dashboard-chip">Jan 20 - Jan 31</span>
+            <span className="dashboard-chip">Monthly ⌄</span>
+            <span className="dashboard-chip">⏚ Filter</span>
           </div>
         </div>
 
-        <div className={styles.statsRow}>
+        <div className="dashboard-stats-row">
           {stats.map((s) => (
-            <div key={s.label} className={styles.statCard}>
-              <p className={styles.statLabel}>{s.label}</p>
-              <p className={styles.statValue}>{s.value}</p>
+            <div key={s.label} className="dashboard-stat-card">
+              <p className="dashboard-stat-label">{s.label}</p>
+              <p className="dashboard-stat-value">{s.value}</p>
               <p
-                className={`${styles.statTrend} ${
-                  s.up ? styles.trendUp : styles.trendDown
+                className={`dashboard-stat-trend ${
+                  s.up ? "dashboard-trend-up" : "dashboard-trend-down"
                 }`}
               >
                 Last week {s.up ? "↗" : "↘"} {s.trend}
@@ -83,45 +82,45 @@ export default function DashboardPreview() {
           ))}
         </div>
 
-        <div className={styles.bottomRow}>
-          <div className={styles.chartCard}>
-            <div className={styles.chartHead}>
+        <div className="dashboard-bottom-row">
+          <div className="dashboard-chart-card">
+            <div className="dashboard-chart-head">
               <div>
-                <p className={styles.chartTitle}>Performance Overview</p>
-                <p className={styles.chartSub}>Statistics</p>
+                <p className="dashboard-chart-title">Performance Overview</p>
+                <p className="dashboard-chart-sub">Statistics</p>
               </div>
-              <span className={styles.chip}>Last 6 Months</span>
+              <span className="dashboard-chip">Last 6 Months</span>
             </div>
-            <div className={styles.legendRow}>
-              <span className={styles.legendItem}>
-                <i className={styles.legendDotPrimary} /> Total Subscriber
+            <div className="dashboard-legend-row">
+              <span className="dashboard-legend-item">
+                <i className="dashboard-legend-dot-primary" /> Total Subscriber
               </span>
-              <span className={styles.legendItem}>
-                <i className={styles.legendDotMuted} /> Total Revenue
+              <span className="dashboard-legend-item">
+                <i className="dashboard-legend-dot-muted" /> Total Revenue
               </span>
             </div>
-            <div className={styles.bars}>
+            <div className="dashboard-bars">
               {bars.map((h, i) => (
                 <span
                   key={i}
-                  className={styles.bar}
+                  className="dashboard-bar"
                   style={{ height: `${h}%` }}
                 />
               ))}
             </div>
           </div>
 
-          <div className={styles.sellerCard}>
-            <p className={styles.chartTitle}>Top Seller by Country</p>
-            <ul className={styles.sellerList}>
+          <div className="dashboard-seller-card">
+            <p className="dashboard-chart-title">Top Seller by Country</p>
+            <ul className="dashboard-seller-list">
               {countries.map((c) => (
-                <li key={c.name} className={styles.sellerRow}>
-                  <span className={styles.sellerFlag} aria-hidden />
-                  <span className={styles.sellerName}>
+                <li key={c.name} className="dashboard-seller-row">
+                  <span className="dashboard-seller-flag" aria-hidden />
+                  <span className="dashboard-seller-name">
                     {c.name}
-                    <span className={styles.sellerValue}>{c.value}</span>
+                    <span className="dashboard-seller-value">{c.value}</span>
                   </span>
-                  <span className={styles.sellerPercent}>92%</span>
+                  <span className="dashboard-seller-percent">92%</span>
                 </li>
               ))}
             </ul>

@@ -1,7 +1,6 @@
 "use client";
 
 import { useTheme } from "@/components/ThemeProvider";
-import styles from "./ThemeToggle.module.css";
 
 export default function ThemeToggle() {
   const { theme, toggleTheme } = useTheme();
@@ -11,13 +10,13 @@ export default function ThemeToggle() {
     <button
       type="button"
       onClick={toggleTheme}
-      className={styles.toggle}
+      className="theme-toggle"
       role="switch"
       aria-checked={isDark}
       aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
     >
-      <span className={styles.track}>
-        <span className={`${styles.thumb} ${isDark ? styles.thumbDark : ""}`}>
+      <span className="theme-toggle-track">
+        <span className={`theme-toggle-thumb ${isDark ? "theme-toggle-thumb-dark" : ""}`}>
           {isDark ? "🌙" : "☀️"}
         </span>
       </span>

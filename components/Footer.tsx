@@ -1,31 +1,30 @@
-import styles from "./Footer.module.css";
 
 const columns = [
   {
-    title: "Product",
-    links: ["Features", "Integrations", "Pricing"],
+    title: "Services",
+    links: ["SaaS Builds", "Websites", "Mobile Apps"],
   },
   {
-    title: "Company",
-    links: ["About Us", "Team", "Careers"],
+    title: "Creative",
+    links: ["Graphic Design", "Animation", "3D Modelling"],
   },
   {
-    title: "Resources",
-    links: ["Help Center", "Case Studies", "Blog"],
+    title: "Growth",
+    links: ["SEO", "Social Media", "Support"],
   },
 ];
 
 export default function Footer() {
   return (
-    <footer className={styles.footer}>
-      <div className={`container ${styles.inner}`}>
-        <div className={styles.top}>
-          <div className={styles.brandCol}>
-            <a href="#top" className={styles.logo}>
-              <span className={styles.logoMark} aria-hidden />
-              Pasar Marketing
+    <footer className="site-footer">
+      <div className="container footer-inner">
+        <div className="footer-top">
+          <div className="footer-brand-col">
+            <a href="#top" className="footer-logo">
+              <span className="footer-logo-mark" aria-hidden />
+              AGENTCLI
             </a>
-            <div className={styles.social}>
+            <div className="footer-social">
               <span aria-hidden>◎</span>
               <span aria-hidden>𝕏</span>
               <span aria-hidden>in</span>
@@ -33,10 +32,10 @@ export default function Footer() {
           </div>
 
           {columns.map((col) => (
-            <div key={col.title} className={styles.col}>
-              <p className={styles.colTitle}>{col.title}</p>
+            <div key={col.title} className="footer-col">
+              <p className="footer-col-title">{col.title}</p>
               {col.links.map((link) => (
-                <a key={link} href="#" className={styles.colLink}>
+                <a key={link} href="#" className="footer-col-link">
                   {link}
                 </a>
               ))}
@@ -44,12 +43,12 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className={styles.bottom}>
-          <div className={styles.bottomLinks}>
+        <div className="footer-bottom">
+          <div className="footer-bottom-links">
             <a href="#">Privacy Policy</a>
             <a href="#">Terms and Conditions</a>
           </div>
-          <p>Pasar Marketing. All rights reserved.</p>
+          <p>AGENTCLI. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -17,9 +17,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Pasar Marketing — Optimize Your Digital Marketing Strategy",
+  title: "AGENTCLI — SaaS, Websites, Apps, and Creative Services",
   description:
-    "Track campaign performance, analyze key metrics, and make data-driven decisions with Pasar Marketing.",
+    "Build SaaS products, websites, mobile apps, creative assets, SEO campaigns, social media packages, animations, and 3D models with AGENTCLI.",
 };
 
 export default function RootLayout({

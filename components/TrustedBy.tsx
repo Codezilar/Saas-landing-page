@@ -1,4 +1,3 @@
-import styles from "./TrustedBy.module.css";
 
 const brands = [
   "Instagram",
@@ -11,14 +10,14 @@ const brands = [
 
 export default function TrustedBy() {
   return (
-    <section className={styles.section}>
-      <div className={`container ${styles.inner}`}>
+    <section className="trusted-section">
+      <div className="container trusted-inner">
         <span className="eyebrow">Interested</span>
-        <h2 className={styles.heading}>Trusted by 300+ businesses</h2>
+        <h2 className="trusted-heading">Trusted by 300+ businesses</h2>
 
-        <div className={styles.logos}>
+        <div className="trusted-logos">
           {brands.map((brand) => (
-            <span key={brand} className={styles.logo}>
+            <span key={brand} className="trusted-logo">
               {brand}
             </span>
           ))}
